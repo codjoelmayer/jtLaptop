@@ -1,0 +1,18 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Custom properties */
+:root {
+    --primary: rgb(0, 0, 0);
+    --secondary: hsl(120, 50%, 100%);
+    --alternative: #189e0940;
+    --awesome: rgb(126, 126, 5, .4);
+}
+/* body */
+body {
+    text-align: center;
+}
