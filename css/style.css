@@ -157,8 +157,20 @@ img[alt="Profile"] {
 }
 .table-wrapper{
     justify-content: center;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
 }
-
+/* Image */
+.productAdmin {
+    width: 5rem;
+    border: 5px solid;
+    border-image: 
+    repeating-linear-gradient(30deg, var(--alternative), var(--awesome), var(--0) 20px) 60;
+}
+footer {
+    z-index: 10;
+    padding-bottom: 1rem;
+}
 @keyframes sliding {
     from{
         transform: translateX(0);
