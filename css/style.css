@@ -17,11 +17,6 @@ Will allow us to define our variables.*/
 ::-webkit-scrollbar {
     display: none;
 }
-/* body: 
-text-align: center -> It will place all the contents in the center.*/
-body {
-    text-align: center;
-}
 /* header and footer 
 To access the custom property, make use of the var() function.*/
 header, footer {
@@ -32,11 +27,20 @@ header, footer {
     background-blend-mode: darken;
 }
 /* Display -> flex: Allow us to place items side-by-side. The default flex-direction is row.*/
-:is(nav, ul, #landing, .slider) {
+:is(nav, ul, #landing, 
+.slider, .team) {
     display: flex;
 }
 /* Display -> grid */
-
+:is(body) {
+    display: grid;
+}
+/* body: 
+text-align: center -> It will place all the contents in the center.*/
+body {
+    text-align: center;
+    grid-template-rows: auto minmax(100%, 100vh) auto;
+}
 /* Selecting an element by the attribute */
 img[alt="logo"] {
     width: 5rem;
@@ -99,6 +103,19 @@ Placing the contents in the middle */
     object-fit: cover;
     object-position: center;
 }
+/* The team */
+.team {
+    justify-content: space-evenly;
+}
+img[alt="Profile"] {
+    width: 20rem;
+    aspect-ratio: 1/1;
+}
+/* headings */
+:is(h1, h2, h3, h4, h5, h6){
+    margin-bottom: 1rem;
+}
+
 @keyframes sliding {
     from{
         transform: translateX(0);
