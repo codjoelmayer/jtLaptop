@@ -74,7 +74,6 @@ Placing the contents in the middle */
     height: 100vh;
     justify-content: center;
     align-items: center;
-    /* place-content: center center; */
 }
 /* To change all the first characters to uppercase */
 #landing h1 {
@@ -167,5 +166,34 @@ img[alt="Profile"] {
     }
     to {
         transform: translateX(-70%);
+    }
+}
+@media screen and (width < 900px) {
+    main, ul {
+        padding-inline: 1rem;
+    }
+    ul {
+        flex-wrap: wrap;
+    }
+    #features {
+        display: none;
+    }
+    .slider {
+        width: 100%;
+    }
+    .team{
+        flex-flow: column wrap;
+    }
+    .team img {
+        width: 100%;
+    }
+    footer {
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+    }
+    /*  */
+    .search-wrapper {
+        justify-content: center;
     }
 }
