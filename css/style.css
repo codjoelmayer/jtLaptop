@@ -28,11 +28,12 @@ header, footer {
 }
 /* Display -> flex: Allow us to place items side-by-side. The default flex-direction is row.*/
 :is(nav, ul, #landing, 
-.slider, .team) {
+.slider, .team, .search-wrapper,
+.products, .card-footer) {
     display: flex;
 }
 /* Display -> grid */
-:is(body) {
+:is(body, .card) {
     display: grid;
 }
 /* body: 
@@ -115,7 +116,40 @@ img[alt="Profile"] {
 :is(h1, h2, h3, h4, h5, h6){
     margin-bottom: 1rem;
 }
+/* Our products */
+.search-wrapper {
+    justify-content: flex-end;
+    margin-block: .5rem;
+}
+.products {
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.card {
+    width: 10rem;
+    grid-template-rows: 10rem auto auto;
+    background: 
+    radial-gradient(var(--awesome), 
+    var(--alternative));
+}
 
+.card img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: center;
+}
+.card-body {
+    margin-block: .5rem;
+}
+.card-footer {
+    justify-content: space-between;
+}
+.card-footer button{
+    border-image: linear-gradient(to right, var(--alternative) var(--awesome) 30 fill);
+    background-color: var(--awesome);
+    padding-inline: .2rem;
+}
 @keyframes sliding {
     from{
         transform: translateX(0);
