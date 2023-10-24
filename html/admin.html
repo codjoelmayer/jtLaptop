@@ -7,6 +7,80 @@
     <title>Admin</title>
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <a href="../index.html">
+                <img src="https://i.postimg.cc/c1b6CT50/logo.png" loading="lazy" alt="logo">
+            </a>
+            <ul>
+                <li>
+                    <a href="../index.html">Home</a>
+                </li>
+                <li>
+                    <a href="./about.html">About</a>
+                </li>
+                <li>
+                    <a href="./products.html">Our Product</a>
+                </li>
+                <li>
+                    <a href="./checkout.html">Checkout Page</a>
+                </li>
+                <li>
+                    <a href="./admin.html">Admin</a>
+                </li>
+                <li>
+                    <a href="./contact.html">Reach us</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="sorting-wrapper">
+            <button>Sort</button>
+            <select name="sorting" id="sorting">
+                <option value="prodName">Product's Name</option>
+                <option value="prodPrice">Product's Price</option>
+
+            </select>
+        </div>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            HP
+                        </td>
+                        <td>Lorem ipsum dolor sit amet consectetur </td>
+                        <td>4</td>
+                        <td>11000</td>
+                        <td>
+                            <i class="bi bi-pencil-square"></i>
+                            <i class="bi bi-archive-fill"></i>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <footer>
+        <p>
+            <span>
+                JT Laptop
+            </span>
+            @
+            <span>
+                2023
+            </span>
+        </p>
+    </footer>     
 </body>
 </html>
