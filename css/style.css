@@ -1,3 +1,4 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
 *,
 *::after,
 *::before {
@@ -29,7 +30,7 @@ header, footer {
 /* Display -> flex: Allow us to place items side-by-side. The default flex-direction is row.*/
 :is(nav, ul, #landing, 
 .slider, .team, .search-wrapper,
-.products, .card-footer) {
+.products, .card-footer, .sorting-wrapper, .table-wrapper) {
     display: flex;
 }
 /* Display -> grid */
@@ -150,6 +151,15 @@ img[alt="Profile"] {
     background-color: var(--awesome);
     padding-inline: .2rem;
 }
+/* Admin */
+.sorting-wrapper{
+    justify-content:space-between;
+    margin-block: 1rem;
+}
+.table-wrapper{
+    justify-content: center;
+}
+
 @keyframes sliding {
     from{
         transform: translateX(0);
