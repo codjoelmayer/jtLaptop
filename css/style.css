@@ -5,14 +5,106 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* Custom properties */
+/* Custom properties: 
+Will allow us to define our variables.*/
 :root {
     --primary: rgb(0, 0, 0);
     --secondary: hsl(120, 50%, 100%);
     --alternative: #548c4e70;
     --awesome: rgb(126, 126, 5, .7);
 }
-/* body */
+/* To hide the scrollbar */
+::-webkit-scrollbar {
+    display: none;
+}
+/* body: 
+text-align: center -> It will place all the contents in the center.*/
 body {
     text-align: center;
+}
+/* header and footer 
+To access the custom property, make use of the var() function.*/
+header, footer {
+    background: 
+    var(--alternative) 
+    linear-gradient(to right, var(--alternative), 
+    var(--awesome));
+    background-blend-mode: darken;
+}
+/* Display -> flex: Allow us to place items side-by-side. The default flex-direction is row.*/
+:is(nav, ul, #landing, .slider) {
+    display: flex;
+}
+/* Display -> grid */
+
+/* Selecting an element by the attribute */
+img[alt="logo"] {
+    width: 5rem;
+}
+/* To apply a space between elements */
+nav {
+    justify-content: space-between;
+}
+/* ul
+gap: will allow us to apply a space between the items or elements.
+align-items: Will allow us to align items on the y-axis if the flex-direction is set to row or default.*/
+ul{
+    gap: 1rem;
+    margin-right: .5rem;
+    align-items: center;
+}
+/* To remove all the default styling on the list, such as bullets, */
+ul li {
+    list-style: none;
+}
+/* In case you want to remove the text decoration, such as an underline, on the anchor tag */
+a {
+    text-decoration: none;
+    color: var(--secondary);
+}
+/* section - landing 
+Placing the contents in the middle */
+#landing {
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    /* place-content: center center; */
+}
+/* To change all the first characters to uppercase */
+#landing h1 {
+    font-size: 4rem;
+    text-transform: capitalize;
+}
+#landing h1 span:first-child {
+    /* display: flex; */
+    /* flex-direction: column; */
+    display: block;
+}
+/* Sliding show */
+/* .slider {
+    width: 50%;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+} */
+.slider {
+    width: 80%;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory; 
+    margin-inline: auto;   
+    animation: sliding 10s linear infinite;
+}
+.slider >* {
+    width: 10rem;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: center;
+}
+@keyframes sliding {
+    from{
+        transform: translateX(0);
+        width: 100%;
+    }
+    to {
+        transform: translateX(-70%);
+    }
 }
