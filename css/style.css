@@ -68,10 +68,14 @@ a {
     text-decoration: none;
     color: var(--secondary);
 }
+/* All sections */
+section {
+    margin-block: 1rem;
+}
 /* section - landing 
 Placing the contents in the middle */
 #landing {
-    height: 100vh;
+    height: 75vh;
     justify-content: center;
     align-items: center;
 }
@@ -86,11 +90,6 @@ Placing the contents in the middle */
     display: block;
 }
 /* Sliding show */
-/* .slider {
-    width: 50%;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-} */
 .slider {
     width: 80%;
     overflow-x: scroll;
@@ -132,7 +131,6 @@ img[alt="Profile"] {
     radial-gradient(var(--awesome), 
     var(--alternative));
 }
-
 .card img {
     width: 100%;
     aspect-ratio: 1/1;
@@ -169,7 +167,7 @@ img[alt="Profile"] {
 }
 footer {
     z-index: 10;
-    padding-bottom: 1rem;
+    padding-block: 1rem;
 }
 @keyframes sliding {
     from{
